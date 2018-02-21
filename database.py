@@ -22,7 +22,7 @@ class Database:
 
     def get_connection(self):
         if self.connection is None:
-            self.connection = sqlite3.connect('/home/ju/Documents/Ecole/2018_hivers/web II/INF3005/tp1/tp1/db/database.db')
+            self.connection = sqlite3.connect('db/database.db')
         return self.connection
 
 
