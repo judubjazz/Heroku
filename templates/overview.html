@@ -40,8 +40,9 @@
 
             if(dict){
                 for (x in dict) {
+                    //enlever overview du url
                     let url = window.location.href;
-                    url = window.location.href.slice(0,29);
+                    url = window.location.href.slice(0,-16);
                     url+=x;
                      let object = {title: 'duree totale:' + dict[x], start:x, allDay: true, url:url};
                      events.push(object);
