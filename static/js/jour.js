@@ -28,10 +28,12 @@ showText = (target, message, index, interval)=> {
  *
  */
 overview_calendar = ()=>{
-    let test = location.pathname;
-   let url = location.protocol + location.hostname +':'+ location.port + location.pathname.slice(0,8);
+    let pathname = location.href.slice(-18,-10);
+    console.log(pathname);
+    console.log(pathname.slice(0,8));
+   let url = location.protocol + location.hostname +':'+ location.port + pathname;
    url +='overview/';
-   url +=location.pathname.slice(8,15);
+   url +=location.href.slice(-10,-3);
    url = new URL(url);
    window.location.href=url;
 };
