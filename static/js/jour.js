@@ -28,6 +28,7 @@ showText = (target, message, index, interval)=> {
  *
  */
 overview_calendar = ()=>{
+    let test = location.pathname;
    let url = location.protocol + location.hostname +':'+ location.port + location.pathname.slice(0,8);
    url +='overview/';
    url +=location.pathname.slice(8,15);
