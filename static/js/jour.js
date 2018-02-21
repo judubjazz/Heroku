@@ -43,7 +43,7 @@ overview_calendar = ()=>{
 naviguer_jour = (action, _date) =>{
     _date = _date.replace(/[^\w\s-]/gi, '');
     let date = new Date(_date);
-    let url = window.location.href.slice(0,29);
+    let url = window.location.href.slice(0,-10);
     let now = new Date(date.getTime());
     if(action === 'yesterday'){
         let yesterday = new Date (now.setDate(date.getDate() - 1));
@@ -90,7 +90,8 @@ modifier= (action, id) =>{
  */
 submit_object_json = (object_json, action)=>{
 
-    fetch('http://127.0.0.1:5000/login', {
+    let url= new URL(location.protocol + location.hostname +':'+ location.port + '/login');
+    fetch(url, {
           method:action,
           headers: {
               'Accept': '*/*',
