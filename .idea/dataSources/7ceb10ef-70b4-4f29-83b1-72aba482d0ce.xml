@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="database.db">
+  <database-model serializer="dbm" rdbms="UNKNOWN" format-version="4.4">
+    <root id="1">
+      <DefaultCasing>exact/mixed</DefaultCasing>
+    </root>
+    <database id="2" parent="1">
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="4" parent="3" name="heures"/>
+    <column id="5" parent="4" name="id">
+      <DataType>INTEGER(2000000000,10)|4</DataType>
+    </column>
+    <column id="6" parent="4" name="matricule">
+      <Position>1</Position>
+      <DataType>VARCHAR(6)(2000000000,10)|12</DataType>
+    </column>
+    <column id="7" parent="4" name="code_de_projet">
+      <Position>2</Position>
+      <DataType>VARCHAR(15)(2000000000,10)|12</DataType>
+    </column>
+    <column id="8" parent="4" name="date_publication">
+      <Position>3</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="9" parent="4" name="duree">
+      <Position>4</Position>
+      <DataType>INTEGER(2000000000,10)|4</DataType>
+    </column>
+    <key id="10" parent="4">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

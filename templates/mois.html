@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <title>Données des mois</title>
+  <meta name="description" content="Les mois contenant des informations pour un matricule précis"/>
+{% endblock %}
+
+{% block content %}
+    {% if erreur %}
+        <h2 style=color:#FF0000>{{ erreur }}</h2>
+    {% else %}
+        {% if mois  %}
+          <h2>Voici les mois disponible pour le matricule {{ matricule }}</h2>
+            {% for un_mois in mois %}
+                <p><img src="/static/images/mario_box.png" width="20" height="20"><a href="/{{ matricule }}/overview/{{ un_mois }}">{{ un_mois }}</a></p>
+            {% endfor %}
+        {% endif %}
+
+        {% if infos == None and mois == None %}
+            {% if date %}
+             <h2>il n y a pas d'info pour le matricule {{ matricule }} en date du {{ date }}</h2>
+            {% else %}
+                <h2>il n'y a pas d'info pour le matricule {{ matricule }} en date du <span id="span"></span></h2>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
+
+{% block sidenav_right %}
+        {#le fantome#}
+        <div style="margin-top: 60%">
+            <img src="/static/images/Boo.png" width="100" height="100">
+        </div>
+{% endblock %}
