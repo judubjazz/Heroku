@@ -7,11 +7,11 @@
 
 {% block content %}
 
-  <h1>Bonsoir!</h1>
+  <h1 class="h2_entete">Bonsoir!</h1>
 
   {% if erreur %}
 
-    <p style="color:#F00">{{ erreur }}</p>
+    <p style="color:gold">{{ erreur }}</p>
 
     <form action="/login" method="POST">
         <div class="input-group">

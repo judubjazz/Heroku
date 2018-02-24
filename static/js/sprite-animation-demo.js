@@ -123,15 +123,15 @@ $(document).ready(()=>{
         coin = sprite({
             context: canvas.getContext("2d"),
             width: 1000,
-            height: 100,
+            height: 1000,
             image: coinImage,
-            numberOfFrames: 10,
-            ticksPerFrame: 4
+            numberOfFrames: 20,
+            ticksPerFrame: 1
         });
 
         // Load sprite sheet
         coinImage.addEventListener("load", gameLoop);
-        coinImage.src = "/static/images/coin-sprite-animation.png";
+        coinImage.src = "/static/images/star.png";
 
     }());
 });

@@ -48,7 +48,7 @@ def start_page():
 @app.route('/<matricule>/')
 def matricule(matricule):
     if not valid_format_matricule(matricule):
-        return render_template('accueil.html', erreur="mauvais format de matricule")
+        return render_template('accueil.html', erreur="mauvais format de matricule"),400
 
 
     info = get_db().get_matricule_info(matricule)
@@ -62,9 +62,9 @@ def matricule(matricule):
 @app.route('/<matricule>/<date_du_jour>')
 def date_du_jour(matricule, date_du_jour):
     if not valid_format_matricule(matricule):
-        return render_template('accueil.html', erreur="mauvais format de matricule")
+        return render_template('accueil.html', erreur="mauvais format de matricule"),400
     if not valid_format_date(date_du_jour):
-        return render_template('accueil.html', erreur="mauvais format de date")
+        return render_template('accueil.html', erreur="mauvais format de date"),400
 
     info = get_db().get_matricule_info(matricule)
     if info is None:

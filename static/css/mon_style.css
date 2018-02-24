@@ -1,12 +1,15 @@
 /*----------------------LAYOUT  BOOSTRAP NAV----------------------------------------------*/
 
 body{
-    background: url(/static/images/anigif_enhanced-19916-1443551932-11.gif) no-repeat center center fixed;
+  background: url(/static/images/night.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   overflow: hidden;
 }
 
+.h2_entete{
+    color:whitesmoke !important;
+}
 html{
   height: 100%;
   overflow: hidden;
@@ -28,7 +31,7 @@ html{
 
 /* Set black background color, white text and some padding */
 footer {
-  color: white;
+  color: black;
   padding: 15px;
 }
 
@@ -40,64 +43,60 @@ footer {
   }
   .row.content {height:auto;}
 }
-/*----------------------MONTH----------------------------------------------*/
 
-#div_carousel table{
-    background-color:#5D94FB ;
-    margin-left: 250px;
-    margin-bottom: 100px;
-    text-align: center;
+
+/*----------------------MOIS.HTML---------------------------------------------*/
+
+.a_mois{
+    color:gold;!important;
+    font-size: x-large;
 }
 
-#erreur_404 {
-    color:#ff0000
+.a_mois:hover{
+    color:#5D94FB;
+    background-color: inherit;
 }
-/*----------------------DAY----------------------------------------------*/
+
+
+
+
+/*----------------------JOUR.HTML----------------------------------------------*/
 .container-info{
     margin-left: 200px;
     margin-bottom: 240px;
 }
-#span_mario{
-    position:relative;
-    top:-250px;
-    bottom: 0px;
-    left: 40px;
-    width: 1000px;
+
+.table_jour{
+    /*border-spacing:7px 7px;*/
+    /*border-collapse: separate;*/
+    box-shadow: 0 1px 2px #C3C3C3;
 }
 
-#mario_pipe {
+#div_carousel{
+    padding: 7%;
+}
+#div_carousel table{
+    background-color:#5D94FB;
+    /*margin-left: 250px;*/
+    /*margin-bottom: 100px;*/
+    margin:auto;
+    text-align: center;
+    border-spacing:7px 7px;
+    border-collapse: separate;
+    box-shadow: 3px 3px rgba(211, 211, 211, 0.6);;
+    border-radius: 1.5%;
+}
+#div_carousel label{
+    text-align: left;
+
+}
+#shooting_star{
     position: relative;
-    top: -229px;
-    bottom: 0px;
-    left: 1300px;
-    width: 180px;
-    height: 145px;
+    margin-left: 1000px;
+    margin-top: -500px;
+    display: none;
 }
-
-#span_bowser{
-    position:relative;
-    top:-200px;
-    bottom: 0px;
-    left: -20px;
-    width: 1000px;
-    font-weight: bold;
-
-}
-
-#bubble_bowser{
-    position:relative;
-    top:-150px;
-    bottom: 0px;
-    left: 240px;
-}
-
-#bowser{
-    position:relative;
-    top:360px;
-    bottom: 0px;
-    left: 0px;
-}
-/*----------------------ARROW----------------------------------------------*/
+/*----------------------FLECHE JOUR SUIVANT/PRECEDENT----------------------------------------------*/
 
 a {
     text-decoration: none;
@@ -107,22 +106,26 @@ a {
 }
 
 a:hover {
-    background-color: #DBFCFF;
-    color: black;
+    background-color: inherit;
 }
 
 .previous {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #5D94FB;
+    color: black;
 }
 
 .next {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #5D94FB;
+    color: black;
 }
 
 .round {
     border-radius: 50%;
+}
+
+.round:hover{
+    background-color: black;
+    color: white;
 }
 
 div.inline {
@@ -132,7 +135,7 @@ div.inline {
 div.container-info{
 
 }
-.clearBoth { clear:both; }
+/*.clearBoth { clear:both; }*/
 
 
 /*----------------------CALENDAR----------------------------------------------*/
@@ -181,9 +184,23 @@ div.container-info{
     margin: 0 auto;
     width: 600px;
     background-color: #FFFFFF;
-      border-radius: 6px;
+    border-radius: 6px;
     box-shadow: 0 1px 2px #C3C3C3;
     -webkit-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
     -moz-box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
     box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);
     }
+
+
+/*----------------------404----------------------------------------------*/
+#train{
+    position: relative;
+}
+
+#erreur_404 {
+    color:gold;
+}
+
+#erreur_400 {
+    color:gold;
+}

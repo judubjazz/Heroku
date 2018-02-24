@@ -1,26 +1,16 @@
 
 $(document).ready(()=>{
-    if($('#span_bowser').length >0 ){
-        showText("#span_bowser", "AUCUNE DONNÉE POUR CE JOUR", 0, 100);
+    if($('#erreur_400').length >0 ){
+        showText("#erreur_400", "AUCUNE DONNÉE POUR CE JOUR", 0, 100);
     }
     if($('#erreur_404').length > 0) {
         showText("#erreur_404", "IL N'Y A PAS DE MATRICULE À CE NOM", 0, 100);
     }
-    // if($('#date_p').length > 0) {
-    //     $( "#date_p" ).html(window.location.href.slice(-10));
-    // }
 });
 
 
 
-// https://stackoverflow.com/questions/7264974/show-text-letter-by-letter
-showText = (target, message, index, interval)=> {
-    if (index < message.length) {
-        $(target).append(message[index++]);
-        setTimeout( ()=> {showText(target, message, index, interval);}, interval);
-    }
 
-};
 
 
 /**
@@ -106,12 +96,8 @@ submit_object_json = (object_json, action)=>{
           .then(result => {
               if (result.ok){
                   //pour reloader apres execution de la function showdiv
-                $('#div_mario').bind('showText', showText("#span_mario", "YAHOOOOO!", 0, 50));
-
-                //show le div et trigger showText
-                $('#div_mario').show('slow','linear', ()=>{
-                    $(this).trigger('showText').then(window.location.reload());
-                });
+                $('#shooting_star').show();
+                window.location.reload()
 
               }
               console.log(result);

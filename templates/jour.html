@@ -7,23 +7,17 @@
 
 {% block content %}
 
-<h2 >Voici les infos pour le jour du {{ date }}</h2>
+<h2 class="h2_entete">Voici les infos pour le jour du {{ date }}</h2>
 <a class="previous round" onclick=naviguer_jour("yesterday",window.location.href.slice(-11))>&#8249;</a>
 <a class="next round" onclick=naviguer_jour("tomorrow",window.location.href.slice(-11))>&#8250;</a>
 
 
 {% if erreur %}
-
-<div class ="container-info">
-    <img id="bowser" src="/static/images/bowser.png" alt="bowser">
-    <div style="margin-top: 30%">
-        <span id="span_bowser" style="color:#ff0000"></span>
-    </div>
-</div>
-
+    <h3 id="erreur_400" style="color: gold"></h3>
+    <canvas id="myCanvas"></canvas>
 {% else %}
 
-<div class ="container-info" >
+
     <div class = "row" >
         <div class="col-md-12">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -41,7 +35,7 @@
                 {% for info in infos %}
 
                     <div id = "div_carousel" class="item{% if loop.index0 == 0 %} active{% endif %}">
-                      <table id="table_jour">
+                      <table class="table_jour">
                             <thead>
                               <tr >
                                 <th colspan="2" id="{{ info[0]}}" style="text-align: center">{{ info[0] }}</th>
@@ -96,25 +90,21 @@
             </div>
         </div>
     </div>
-</div>
+
 
 {% endif %}
 
 {% endblock %}
 
 {% block sidenav_left %}
-    <div id="div_mario" style="margin-top: 70%; margin-left: 50%;display: none" >
-        <p><img src="/static/images/cartoon-speech-bubble-md.png" width="220" height="350" alt="cartoon bubble"></p>
-        <span id="span_mario"></span>
-    </div>
+
 {% endblock %}
 
 {% block sidenav_right %}
-    {% if erreur is undefined%}
 
-        <div>
-            <img id="mario_pipe" src="/static/images/super-mario-brothers-147465_960_720.png" alt="mario_pipe" >
+        <div id ='shooting_star'>
+            <img src="/static/images/Shootingstar-full.png" >
         </div>
 
-    {% endif %}
+
 {% endblock %}
